@@ -894,14 +894,14 @@ h3 {
   display: grid;
   max-width: 1180px;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(18px, 3vw, 30px);
 }
 
 .detail-card {
   position: relative;
-  min-height: 390px;
-  padding: 36px 28px;
+  min-height: 410px;
+  padding: 34px 24px;
   border: 1px solid var(--line);
   border-radius: 34px;
   background: rgba(255, 255, 255, 0.88);
@@ -935,6 +935,7 @@ h3 {
   position: relative;
   z-index: 1;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .section--split {
@@ -1249,11 +1250,14 @@ h3 {
     opacity: 0.22;
   }
 
-  .cards,
   .attendance__card,
   .section--split,
   .location__card {
     grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .attendance__card {
@@ -1274,6 +1278,10 @@ h3 {
 }
 
 @media (max-width: 620px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
   body {
     font-size: 15px;
   }
