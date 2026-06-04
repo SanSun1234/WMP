@@ -46,7 +46,7 @@
       <nav aria-label="Основная навигация">
         <a href="#details">Пожелания</a>
         <a href="#schedule">Расписание</a>
-        <a href="#rsvp">RSVP</a>
+        <a href="#contacts">Контакты</a>
       </nav>
     </header>
 
@@ -68,7 +68,9 @@
           <div class="hero__date">5 сентября 2026</div>
           <p class="hero__place">Ресторан «Чабарок»</p>
           <div class="hero__actions">
-            <a class="button button--primary" href="#rsvp">Подтвердить присутствие</a>
+            <a class="button button--primary" href="https://t.me/VAYSILII" target="_blank" rel="noreferrer">
+              Подтвердить в Telegram
+            </a>
             <a class="button button--ghost" href="#schedule">Посмотреть программу</a>
           </div>
         </div>
@@ -179,53 +181,15 @@
         </div>
       </section>
 
-      <section class="rsvp section section--dark" id="rsvp" aria-labelledby="rsvp-title">
-        <div class="section__intro reveal">
-          <p class="eyebrow">RSVP</p>
-          <h2 id="rsvp-title">Подтвердите присутствие</h2>
-        </div>
-        <form class="rsvp-form reveal" data-rsvp-form>
-          <label>
-            Имя и фамилия
-            <input type="text" name="name" placeholder="Например, Анна Иванова" required />
-          </label>
-          <label>
-            Ваш ответ
-            <select name="attendance" required>
-              <option value="">Выберите вариант</option>
-              <option>Буду</option>
-              <option>Не смогу</option>
-              <option>Уточню позже</option>
-            </select>
-          </label>
-          <label>
-            Количество гостей
-            <input type="number" name="guests" min="1" max="5" value="1" />
-          </label>
-          <label>
-            Пищевые ограничения
-            <input type="text" name="diet" placeholder="Если есть, напишите здесь" />
-          </label>
-          <label>
-            Любимая песня для вечера
-            <input type="text" name="song" placeholder="Исполнитель и название" />
-          </label>
-          <label class="rsvp-form__wide">
-            Комментарий или пожелание
-            <textarea name="message" rows="4" placeholder="Будем рады вашим словам"></textarea>
-          </label>
-          <button class="button button--light rsvp-form__wide" type="submit">Отправить ответ</button>
-          <p class="form-success rsvp-form__wide" role="status" hidden>
-            Спасибо! Ваш ответ сохранён. Мы очень ждём встречи с вами.
-          </p>
-        </form>
-      </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__art" aria-hidden="true">♡</div>
       <p class="eyebrow">Есть вопросы?</p>
       <h2>Мы на связи</h2>
+      <p class="footer__note">
+        Подтвердите присутствие личным сообщением в Telegram.
+      </p>
       <div class="footer__contacts">
         <a href="tel:+375291490837">8 (029) 149-08-37</a>
         <a href="https://t.me/VAYSILII" target="_blank" rel="noreferrer">@VAYSILII</a>

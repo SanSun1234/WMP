@@ -1,6 +1,5 @@
 const countdown = document.querySelector("[data-countdown]");
 const progress = document.querySelector(".progress");
-const rsvpForm = document.querySelector("[data-rsvp-form]");
 const musicToggle = document.querySelector("[data-music-toggle]");
 const calendarButton = document.querySelector("[data-calendar]");
 const envelopeButton = document.querySelector("[data-open-envelope]");
@@ -95,25 +94,6 @@ function downloadCalendarFile() {
   link.click();
   URL.revokeObjectURL(url);
 }
-
-rsvpForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const success = rsvpForm.querySelector(".form-success");
-  const formData = Object.fromEntries(new FormData(rsvpForm).entries());
-  localStorage.setItem("mikhail-polina-rsvp", JSON.stringify(formData));
-
-  if (success) {
-    success.hidden = false;
-    success.animate(
-      [
-        { opacity: 0, transform: "translateY(10px)" },
-        { opacity: 1, transform: "translateY(0)" }
-      ],
-      { duration: 450, easing: "ease-out" }
-    );
-  }
-});
 
 musicToggle?.addEventListener("click", () => {
   const isActive = musicToggle.getAttribute("aria-pressed") === "true";
