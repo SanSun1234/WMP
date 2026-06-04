@@ -22,7 +22,22 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="invitation-locked">
+    <section class="envelope-gate" aria-label="Открыть свадебное приглашение">
+      <div class="envelope-scene">
+        <button class="envelope" type="button" data-open-envelope aria-label="Открыть приглашение">
+          <span class="envelope__flap"></span>
+          <span class="envelope__paper">
+            <span class="envelope__monogram">M&P</span>
+            <span class="envelope__names">Михаил и Полина</span>
+          </span>
+          <span class="envelope__front"></span>
+          <span class="envelope__seal">♡</span>
+        </button>
+        <p class="envelope-gate__hint">Нажмите, чтобы открыть приглашение</p>
+      </div>
+    </section>
+
     <div class="progress" aria-hidden="true"></div>
     <div class="petals" aria-hidden="true"></div>
 

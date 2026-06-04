@@ -3,8 +3,19 @@ const progress = document.querySelector(".progress");
 const rsvpForm = document.querySelector("[data-rsvp-form]");
 const musicToggle = document.querySelector("[data-music-toggle]");
 const calendarButton = document.querySelector("[data-calendar]");
+const envelopeButton = document.querySelector("[data-open-envelope]");
 
 const weddingDate = new Date("2026-09-05T15:30:00+03:00");
+
+function openEnvelope() {
+  document.body.classList.add("envelope-opening");
+
+  window.setTimeout(() => {
+    document.body.classList.add("envelope-open");
+    document.body.classList.remove("invitation-locked");
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, 1050);
+}
 
 function updateCountdown() {
   if (!countdown) return;
@@ -111,6 +122,7 @@ musicToggle?.addEventListener("click", () => {
 });
 
 calendarButton?.addEventListener("click", downloadCalendarFile);
+envelopeButton?.addEventListener("click", openEnvelope);
 
 window.addEventListener("scroll", updateProgress, { passive: true });
 window.addEventListener("resize", updateProgress);
