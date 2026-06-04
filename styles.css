@@ -741,7 +741,7 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px 16px 24px;
+  padding: 18px 16px 24px;
   border: 1px solid rgba(109, 31, 50, 0.12);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.72);
@@ -752,9 +752,10 @@ h3 {
 .countdown__grid strong {
   display: block;
   font-family: var(--serif);
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.72;
-  transform: translateY(-8px);
+  font-size: clamp(3rem, 7.5vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: 8px;
+  transform: translateY(-4px);
 }
 
 .countdown__grid span {
@@ -763,6 +764,8 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.12em;
   line-height: 1;
+  position: relative;
+  z-index: 1;
   text-transform: uppercase;
 }
 
