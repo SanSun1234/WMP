@@ -55,6 +55,7 @@
     <header class="site-header">
       <a href="#hero" class="brand">M&P</a>
       <nav aria-label="Основная навигация">
+        <a href="#attendance">Участие</a>
         <a href="#details">Пожелания</a>
         <a href="#schedule">Расписание</a>
         <a href="#contacts">Контакты</a>
@@ -79,9 +80,7 @@
           <div class="hero__date">5 сентября 2026</div>
           <p class="hero__place">Ресторан «Чабарок»</p>
           <div class="hero__actions">
-            <a class="button button--primary" href="https://t.me/VAYSILII" target="_blank" rel="noreferrer">
-              Подтвердить в Telegram
-            </a>
+            <a class="button button--primary" href="#attendance">Подтвердить присутствие</a>
             <a class="button button--ghost" href="#schedule">Посмотреть программу</a>
           </div>
         </div>
@@ -120,6 +119,39 @@
         </div>
       </section>
 
+      <section class="attendance section" id="attendance" aria-labelledby="attendance-title">
+        <div class="attendance__card reveal">
+          <div class="attendance__content">
+            <p class="eyebrow">Подтверждение</p>
+            <h2 id="attendance-title">Будете с нами?</h2>
+            <p>
+              Пожалуйста, подтвердите присутствие в нашем Telegram-чате. Мы подготовили
+              короткие сообщения — выберите подходящий вариант, текст скопируется
+              автоматически, а чат откроется в новом окне.
+            </p>
+          </div>
+          <div class="attendance__actions">
+            <button
+              class="attendance-option"
+              type="button"
+              data-attendance-message="Здравствуйте! С радостью подтверждаю своё присутствие на свадьбе Михаила и Полины. Буду один/одна. Спасибо за приглашение — с теплом жду этого дня."
+            >
+              <span>Иду один</span>
+              <small>Скопировать текст и открыть чат</small>
+            </button>
+            <button
+              class="attendance-option attendance-option--accent"
+              type="button"
+              data-attendance-message="Здравствуйте! С радостью подтверждаю своё присутствие на свадьбе Михаила и Полины. Буду вместе с гостем, то есть +1. Спасибо за приглашение — с теплом жду этого дня."
+            >
+              <span>Иду +1</span>
+              <small>Скопировать текст и открыть чат</small>
+            </button>
+          </div>
+          <p class="attendance__status" data-attendance-status role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
       <section class="details section" id="details" aria-labelledby="details-title">
         <div class="section__intro reveal">
           <p class="eyebrow">Пожелания</p>
@@ -131,24 +163,25 @@
             <h3>Дресс-код</h3>
             <p>
               Нам совсем не важен ваш образ — будьте в том, в чём вам комфортно.
-              Если захотите поддержать атмосферу праздника, будем рады оттенкам
-              бордового, зелёного, белого, молочного и шампань.
+              Но если захотите добавить в свой аутфит бордовую деталь — будем вам
+              бесконечно рады и заметим её с особой теплотой.
             </p>
           </article>
           <article class="detail-card reveal">
             <div class="line-icon" aria-hidden="true">✉</div>
-            <h3>Подарки</h3>
+            <h3>Лист пожеланий</h3>
             <p>
-              Мы не хотим вас озадачивать выбором подарка, поэтому будем благодарны
-              за вклад в мечты нашей семьи.
+              Мы не хотим вас озадачивать выбором подарка, поэтому просим отдать
+              предпочтение конвертам. P.S. Мы будем рады, если вы откажетесь от цветов
+              в пользу сертификатов в различные магазины.
             </p>
           </article>
           <article class="detail-card reveal">
             <div class="line-icon" aria-hidden="true">♪</div>
-            <h3>Музыка</h3>
+            <h3>Песни по заявкам</h3>
             <p>
-              Вы можете предложить любимую песню, которую хотели бы услышать на
-              вечере и разделить с нами настроение этого дня.
+              Вы можете стать частью нашего банкета и предложить свои варианты
+              музыкального сопровождения.
             </p>
           </article>
         </div>
@@ -203,7 +236,7 @@
       <p class="eyebrow">Есть вопросы?</p>
       <h2>Мы на связи</h2>
       <p class="footer__note">
-        Подтвердите присутствие личным сообщением в Telegram.
+        Подтвердите присутствие в Telegram-чате или напишите нам лично, если появятся вопросы.
       </p>
       <div class="footer__contacts">
         <a href="tel:+375291490837">8 (029) 149-08-37</a>

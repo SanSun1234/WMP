@@ -2,8 +2,11 @@ const countdown = document.querySelector("[data-countdown]");
 const progress = document.querySelector(".progress");
 const calendarButton = document.querySelector("[data-calendar]");
 const envelopeButton = document.querySelector("[data-open-envelope]");
+const attendanceButtons = document.querySelectorAll("[data-attendance-message]");
+const attendanceStatus = document.querySelector("[data-attendance-status]");
 
 const weddingDate = new Date("2026-09-05T15:30:00+03:00");
+const telegramChatUrl = "https://t.me/+7OHb122gcRJkOTMy";
 
 function openEnvelope() {
   document.body.classList.add("envelope-opening");
@@ -93,6 +96,32 @@ function downloadCalendarFile() {
   link.click();
   URL.revokeObjectURL(url);
 }
+
+async function copyAttendanceMessage(message) {
+  try {
+    await navigator.clipboard.writeText(message);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+attendanceButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const message = button.dataset.attendanceMessage;
+    const copied = await copyAttendanceMessage(message);
+
+    if (attendanceStatus) {
+      attendanceStatus.textContent = copied
+        ? "Текст скопирован. Вставьте его в открывшемся Telegram-чате и отправьте."
+        : "Telegram-чат откроется сейчас. Скопируйте текст с кнопки вручную, если браузер не разрешил автокопирование.";
+    }
+
+    window.setTimeout(() => {
+      window.open(telegramChatUrl, "_blank", "noopener,noreferrer");
+    }, 250);
+  });
+});
 
 calendarButton?.addEventListener("click", downloadCalendarFile);
 envelopeButton?.addEventListener("click", openEnvelope);
