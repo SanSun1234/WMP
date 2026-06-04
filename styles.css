@@ -973,21 +973,6 @@ h3 {
   color: var(--forest);
 }
 
-.music-toggle {
-  position: fixed;
-  z-index: 35;
-  right: 18px;
-  bottom: 18px;
-  min-height: 44px;
-  border: 1px solid rgba(109, 31, 50, 0.14);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--burgundy);
-  cursor: pointer;
-  padding: 10px 16px;
-  box-shadow: 0 12px 32px rgba(38, 21, 26, 0.18);
-}
-
 .petal {
   position: fixed;
   top: -24px;
@@ -1238,10 +1223,6 @@ h3 {
     font-size: 1.25rem;
   }
 
-  .music-toggle {
-    right: 12px;
-    bottom: 12px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

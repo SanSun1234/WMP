@@ -1,6 +1,5 @@
 const countdown = document.querySelector("[data-countdown]");
 const progress = document.querySelector(".progress");
-const musicToggle = document.querySelector("[data-music-toggle]");
 const calendarButton = document.querySelector("[data-calendar]");
 const envelopeButton = document.querySelector("[data-open-envelope]");
 
@@ -94,12 +93,6 @@ function downloadCalendarFile() {
   link.click();
   URL.revokeObjectURL(url);
 }
-
-musicToggle?.addEventListener("click", () => {
-  const isActive = musicToggle.getAttribute("aria-pressed") === "true";
-  musicToggle.setAttribute("aria-pressed", String(!isActive));
-  musicToggle.textContent = isActive ? "Музыка: выкл" : "Музыка: вкл";
-});
 
 calendarButton?.addEventListener("click", downloadCalendarFile);
 envelopeButton?.addEventListener("click", openEnvelope);
