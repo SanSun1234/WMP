@@ -13,7 +13,7 @@ function openEnvelope() {
     document.body.classList.add("envelope-open");
     document.body.classList.remove("invitation-locked");
     window.scrollTo({ top: 0, behavior: "instant" });
-  }, 1050);
+  }, 1350);
 }
 
 function updateCountdown() {
